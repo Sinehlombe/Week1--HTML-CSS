@@ -90,9 +90,86 @@ HTML BOLD and ITALICS
 
             HTML Date and Time Inputs
               - uses <time> elements. 
-              - 
+              - opening tag (<time>) and a closing tag (</time>). 
+              - i.e. <time>May 8th</time> 
+                    -<time>May 8th 2025</time> 
 
-              
+        HTML Code, pre and br
+                - showcase code on a webpage:
+                    -code element
+                        - <code> {colour green} </code>
+               Let's say we want to change the word "H4" by putting brackets around it. However, doing so turns the word into an actual H4 headline instead of displaying "H4" as text. Let me try wrapping it in a                  code element, but unfortunately, that will not prevent the browser from interpreting it as an H4 tag. To achieve this, we need to type "&lt;". This is known as an HTML entity. When we type                         "&lt;", it will be displayed as a less than sign. Similarly, typing "&gt;" will show a greater than sign.
+
+         Br element
+                 - line breaks in sentences at the end of each lines. 
+                 - i.e.  <p>
+                         They<br>
+                        you took my open <br>
+                        </p>
+                - notice how  there the br element is a simple tag without an opening or closing tag.
+        pre element
+                -when  you want the spacing to be an integral part of the content's meaning. 
+                - use HTML and the pre element <pre> to achieve that. 
+                    -Wrap the poem in pre tags, and now you can see that the browser respects the spacing, line breaks, and everything else. 
+     
+        HTML Superscripts, Subscripts and Small Text
+            - can be used where you need to mark up certain bits of content as having a different meaning than the rest.
+
+            superscripts
+                -Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. 
+                -Superscript text can be used for footnotes, like WWW[1]
+            Subscripts are characters that are set below the normal baseline for text. 
+            
+            - i.e <p>something that has a footnote <sup>2<sup></p> = something that has a footnote. (to the power2) 
+                    <small> 2019 fancy campany = 2019 fancy company (appears as a small font)
+                    <p>H<sub>2</sub>o</p>
+
+    HTML Capabilities
+    Troubleshooting and Debugging HTML Code
+    -debugging code
+        -broken code
+        <ol>
+        <li>one</li>
+        <li>two<li>
+        <li>three</li>
+        <li>four</li>
+        </ol>
+
+        Code excecuted by the browser
+            1. one
+            2. two
+            3. 
+            4. three
+            5. four
+    - issue with the code is that there is no proper closing of the list element. 
+
+    HTML Attributes
+        -global attributes
+            - class attribute: most commonly used. 
+                -It allows one to assign a reusable name to any element. 
+                    -can then be styled using CSS for all elements sharing that class. 
+            -ID attribute
+                - can only use unique names once on an entire HTML page
+                come in handy when we need to address specific elements in JavaScript or targeted links. The uniqueness of an ID name ensures that there will always just be one element with that ID, making it                      useful for interacting with JavaScript or links. Regardless of the use case, class and ID attributes provide a way to name HTML elements and reference them in other parts of the code stack.
+            -dir attribute 
+                -Specifies the text direction for the content in an element
+            -lang	
+                -Specifies the language of the element's content
+
+        ARIA Roles
+            - are like extra attributes that we can add to HTML elements to make them more meaningful and help browsers understand what they represent. 
+            -The goal is to rely on proper HTML elements to convey the right message about the content's meaning, without needing ARIA Roles. However, reality does not always align with ideals, and sometimes                     compromises have to be made in the code. It becomes a big problem if these compromises make a website difficult or impossible for people with disabilities to use it. In fact, it is against the law in               many places to have an inaccessible website for people with disabilities. 
+                - browser accessibility tree
+                    -he accessibility tree is like a companion to the DOM tree, which the browser creates from the website's content. While the DOM tree represents the structure of the HTML, the accessibility tree                  is crucial for assistive devices like screen readers. It allows them to provide a better experience to users. When we look at the accessibility tree, we can see that it treats the content as                        separate text containers. However, this can result in a poor experience, such as each letter of "hello" being read out individually. To improve this, we can use ARIA.
+       
+        Formatting HTML
+        REDO
+
+        HTML Navigation and Linking
+            -HTML Links
+                
+        
+
 
 
               
