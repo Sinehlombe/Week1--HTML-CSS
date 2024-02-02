@@ -169,7 +169,8 @@ HTML BOLD and ITALICS
             -HTML Links
                 
         
-
+    HTML Working with Graphics and Images
+    Images
 
 
               
