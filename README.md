@@ -161,12 +161,49 @@ HTML BOLD and ITALICS
             -The goal is to rely on proper HTML elements to convey the right message about the content's meaning, without needing ARIA Roles. However, reality does not always align with ideals, and sometimes                     compromises have to be made in the code. It becomes a big problem if these compromises make a website difficult or impossible for people with disabilities to use it. In fact, it is against the law in               many places to have an inaccessible website for people with disabilities. 
                 - browser accessibility tree
                     -he accessibility tree is like a companion to the DOM tree, which the browser creates from the website's content. While the DOM tree represents the structure of the HTML, the accessibility tree                  is crucial for assistive devices like screen readers. It allows them to provide a better experience to users. When we look at the accessibility tree, we can see that it treats the content as                        separate text containers. However, this can result in a poor experience, such as each letter of "hello" being read out individually. To improve this, we can use ARIA.
+
+
+        ARIA roles are added to HTML elements using role="role type", where role type is the name of a role in the ARIA specification.
+                -For example, <ul role="tabpanel"> will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab                   panel and accessibility has actually been negatively impacted.
+      
+        There are 6 categories of ARIA roles:
+            -. Document structure roles
+                    - provide a structural description for a section of content
+            - Widget roles
+            -Landmark roles
+                    -landmark roles provide a way to identify the organization and structure of a web page. By classifying and labeling sections of a page, structural information conveyed visually through layout                        is represented programmatically. 
+            - Live Region Roles
+                    -used to define elements with content that will be dynamically changed. Sighted users can see dynamic changes when they are visually noticeable. These roles help low vision and blind users know                      if content has been updated.
+            - Abstract roles
+                    - Abstract roles are only intended for use by browsers to help organize and streamline a document.
        
         Formatting HTML
         REDO
 
         HTML Navigation and Linking
             -HTML Links
+                - The HTML <a> tag defines a hyperlink. It has the following syntax:
+                -The target Attribute
+                    -The target attribute can have one of the following values:
+
+                        _self - Default. Opens the document in the same window/tab as it was clicked
+                        _blank - Opens the document in a new window or tab
+                        _parent - Opens the document in the parent frame
+                        _top - Opens the document in the full body of the window
+
+    - Absolute URLs vs. Relative URLs
+        -Both examples above are using an absolute URL (a full web address) in the href attribute.
+
+            -A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+            Absolute url has "www"
+            Relative URL has  no www at he beginning. 
+    - HTML Links - Use an Image as a Link
+        -To use an image as a link, just put the <img> tag inside the <a> tag:
+            -<a href="default.asp">
+            <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+            </a>
+
+Example
                 
         
     HTML Working with Graphics and Images
